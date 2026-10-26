@@ -1,0 +1,100 @@
+body {
+    font-family: Georgia;
+}
+.header {
+    background: linear-gradient(to right, white, #a9d3f5);
+    color: red;
+    font-family: Verdana;
+    font-style: italic;
+    font-size: 50px;
+    text-align: center;
+    padding: 5px;
+}
+.nav {
+    background: linear-gradient(to bottom, #e1e1e1, rgb(208, 208, 208));
+    border-radius: 4px;
+    height: 40px;
+    margin: 8px 0;
+    box-shadow: 3px 3px rgb(165, 165, 165);
+}
+.nav .pt {
+    background: linear-gradient(to bottom, #e3e3e3, rgb(239, 239, 239));
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    float: left;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    border-radius: 4px;
+    padding: 11px 30px;
+    margin: 0 1px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.nav .pt:hover {
+    background: linear-gradient(to bottom, rgb(204, 204, 204), rgb(145, 145, 145));
+}
+.left {
+    float: left;
+    width: 170px;
+}
+.right {
+    float: right;
+    width: 190px;
+}
+.center {
+    overflow: hidden;
+    margin: 0 8px;
+    padding: 10px;
+    background: linear-gradient(to bottom, white, #b9dcf7);
+    border-radius: 6px;
+}
+.block {
+    background: linear-gradient(to bottom, #d8ecfb, #b9dcf7);
+    border-radius: 6px;
+    box-shadow: 3px 3px 4px gray;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.block_title {
+    background-color: #7ec1f2;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.block ul {
+    padding-left: 18px;
+}
+/* картинки с наплывающей подписью, как в примере */
+.base {
+    position: relative;
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin: 6px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px gray;
+}
+.base img {
+    width: 110px;
+    height: 110px;
+}
+.layer {
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: inherit;
+    height: inherit;
+    line-height: 110px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(10, 80, 180, 0.6);
+    transition: left .3s;
+}
+.base:hover .layer {
+    left: 0px;
+}

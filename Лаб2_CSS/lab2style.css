@@ -1,0 +1,19 @@
+.nav{
+    background-color: goldenrod; /* фон блока  меню*/
+    width: 250px;  /* ширина блока меню */
+    box-shadow: 5px 5px gray; /* тень блока */
+    font-size: 20px;    /* размер шрифта */
+    padding:5px;
+}
+.links{
+    display: block;    /* из строчного блока получаем блочный */
+    text-decoration: none;  /* убираем подчеркивание ссылок */
+    padding:5px;   /* поля кнопки */
+    background-color: gold;    /* фон кнопки */
+    border-bottom: gray;    /* цвет рамки */
+    border-bottom-style: groove; /* стиль рамки */
+    border-right-style:ridge;
+}
+.links:hover{
+    background-color: goldenrod; /* фон кнопки при наведении */
+}
