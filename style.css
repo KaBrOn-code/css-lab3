@@ -1,50 +1,40 @@
-/* Трёхколоночный макет на float (flex и grid не используются) */
 body {
-    margin: 0;
-    padding: 8px;
-    font-family: Georgia, 'Times New Roman', serif;
-    background: #fff;
+    font-family: Georgia;
 }
-
-/* шапка */
 .header {
-    background: linear-gradient(to right, #ffffff, #a9d3f5);
-    border: 1px solid #c9d6e3;
-    color: #E0201B;
-    font-family: Verdana, Arial, sans-serif;
+    background: linear-gradient(to right, white, #a9d3f5);
+    color: red;
+    font-family: Verdana;
     font-style: italic;
-    font-size: 54px;
+    font-size: 50px;
     text-align: center;
-    padding: 6px 0;
+    padding: 5px;
 }
-
-/* горизонтальное меню */
 .nav {
     background: linear-gradient(to bottom, #e1e1e1, rgb(208, 208, 208));
     border-radius: 4px;
+    height: 40px;
     margin: 8px 0;
-    overflow: hidden;            /* панель охватывает плавающие пункты */
     box-shadow: 3px 3px rgb(165, 165, 165);
 }
 .nav .pt {
-    float: left;                 /* пункты в строку */
-    display: block;
     background: linear-gradient(to bottom, #e3e3e3, rgb(239, 239, 239));
-    color: black;
     text-decoration: none;
+    font-size: 14px;
+    display: block;
+    float: left;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    border-radius: 4px;
+    padding: 11px 30px;
+    margin: 0 1px;
+    color: black;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 14px;
-    padding: 10px 30px;
-    margin-right: 1px;
-    border-right: 1px solid #888;
-    border-radius: 4px;
 }
 .nav .pt:hover {
     background: linear-gradient(to bottom, rgb(204, 204, 204), rgb(145, 145, 145));
 }
-
-/* левая и правая колонки */
 .left {
     float: left;
     width: 170px;
@@ -53,71 +43,58 @@ body {
     float: right;
     width: 190px;
 }
-.panel {
-    background: linear-gradient(to bottom, #d8ecfb, #b9dcf7);
-    border: 1px solid #9cc4e4;
-    border-radius: 6px;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
-    padding: 6px 10px 10px;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-.panel p {
-    margin: 6px 0;
-    text-align: justify;
-}
-.panel ul {
-    margin: 6px 0;
-    padding-left: 18px;
-}
-.panel-title {
-    background: #7EC1F2;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* центральная колонка: обычный блок, overflow: hidden не даёт ему заходить под плавающие колонки */
 .center {
     overflow: hidden;
     margin: 0 8px;
     padding: 10px;
-    background: linear-gradient(to bottom, #ffffff, #b9dcf7);
-    border: 1px solid #9cc4e4;
+    background: linear-gradient(to bottom, white, #b9dcf7);
     border-radius: 6px;
-    font-size: 0;                /* убираем зазоры между inline-block */
 }
-
-/* плитка с наплывающей подписью (как в примере с наплывающим блоком) */
-.tile {
-    display: inline-block;       /* плитки сами переносятся при сужении окна */
-    position: relative;          /* относительно плитки позиционируется .layer */
+.block {
+    background: linear-gradient(to bottom, #d8ecfb, #b9dcf7);
+    border-radius: 6px;
+    box-shadow: 3px 3px 4px gray;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.block_title {
+    background-color: #7ec1f2;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.block ul {
+    padding-left: 18px;
+}
+/* картинки с наплывающей подписью, как в примере */
+.base {
+    position: relative;
+    float: left;
     width: 110px;
     height: 110px;
     margin: 6px;
     border-radius: 8px;
-    overflow: hidden;            /* скрываем подпись, пока она за пределами плитки */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    box-shadow: 3px 3px 5px gray;
 }
-.tile img {
-    width: 100%;
-    height: 100%;
-    display: block;
+.base img {
+    width: 110px;
+    height: 110px;
 }
 .layer {
     position: absolute;
-    left: 0;
-    bottom: -40px;               /* подпись спрятана под нижним краем */
-    width: 100%;
-    height: 34px;
-    line-height: 34px;
+    top: 0px;
+    left: -100%;
+    width: inherit;
+    height: inherit;
+    line-height: 110px;
     text-align: center;
-    font-size: 15px;
-    color: #fff;
+    color: white;
     text-decoration: none;
     background-color: rgba(10, 80, 180, 0.6);
-    transition: bottom .3s;      /* плавное появление */
+    transition: left .3s;
 }
-.tile:hover .layer {
-    bottom: 0;                   /* при наведении подпись выезжает снизу */
+.base:hover .layer {
+    left: 0px;
 }

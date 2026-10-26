@@ -1,58 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои сервисы — трёхколоночный макет</title>
+    <title>Мои сервисы</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">МОИ СЕРВИСЫ</div>
+    <div class=header>МОИ СЕРВИСЫ</div>
 
-    <div class="nav">
-        <a class="pt" href="#">Главная</a>
-        <a class="pt" href="#">Сервисы</a>
-        <a class="pt" href="#">Новости</a>
-        <a class="pt" href="#">Контакты</a>
-        <a class="pt" href="#">О нас</a>
+    <div class=nav>
+        <a class=pt href="#">Главная</a>
+        <a class=pt href="#">Сервисы</a>
+        <a class=pt href="#">Новости</a>
+        <a class=pt href="#">Контакты</a>
+        <a class=pt href="#">О нас</a>
     </div>
 
-    <div class="wrapper">
-        <!-- 1. левый блок (float: left) -->
-        <div class="left">
-            <div class="panel">
-                <div class="panel-title">Новости</div>
-                <p>Мы собрали на одной странице сервисы, которыми пользуемся каждый день: почту, документы, облачный диск, видеосвязь, поиск и календарь.</p>
-                <p>Наведите курсор на иконку в центре, чтобы увидеть название сервиса.</p>
-            </div>
+    <div class=left>
+        <div class=block>
+            <div class=block_title>Новости</div>
+            <p>Здесь собраны сервисы, которыми мы пользуемся каждый день: почта, документы, диск, видеосвязь, поиск и календарь.</p>
+            <p>Наведите на картинку, чтобы увидеть название.</p>
         </div>
+    </div>
 
-        <!-- 2. правый блок (float: right) -->
-        <div class="right">
-            <div class="panel">
-                <div class="panel-title">Контакты</div>
-                <p><b>Адрес:</b> г. Уфа, ул. Ленина, 1</p>
-                <p><b>Телефон:</b> 8-999-999-99-99</p>
-            </div>
-            <div class="panel">
-                <div class="panel-title">Услуги</div>
-                <ul>
-                    <li>Настройка почты</li>
-                    <li>Совместная работа с документами</li>
-                    <li>Видеоконференции</li>
-                </ul>
-            </div>
+    <div class=right>
+        <div class=block>
+            <div class=block_title>Контакты</div>
+            <p><b>Адрес:</b> г. Уфа, ул. Ленина, 1</p>
+            <p><b>Телефон:</b> 8-999-999-99-99</p>
         </div>
+        <div class=block>
+            <div class=block_title>Услуги</div>
+            <ul>
+                <li>Настройка почты</li>
+                <li>Работа с документами</li>
+                <li>Видеоконференции</li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- 3. центральный блок (обычный, overflow: hidden) -->
-        <div class="center">
-            <div class="tile"><img src="img/gmail.png" alt="Gmail"><a class="layer" href="#">Почта</a></div>
-            <div class="tile"><img src="img/docs.png" alt="Документы"><a class="layer" href="#">Документы</a></div>
-            <div class="tile"><img src="img/drive.png" alt="Диск"><a class="layer" href="#">Диск</a></div>
-            <div class="tile"><img src="img/meet.png" alt="Meet"><a class="layer" href="#">Meet</a></div>
-            <div class="tile"><img src="img/google.png" alt="Поиск"><a class="layer" href="#">Поиск</a></div>
-            <div class="tile"><img src="img/calendar.png" alt="Календарь"><a class="layer" href="#">Календарь</a></div>
-        </div>
+    <div class=center>
+        <div class=base><img src="img/gmail.png"><a href="#" class=layer>Почта</a></div>
+        <div class=base><img src="img/docs.png"><a href="#" class=layer>Документы</a></div>
+        <div class=base><img src="img/drive.png"><a href="#" class=layer>Диск</a></div>
+        <div class=base><img src="img/meet.png"><a href="#" class=layer>Meet</a></div>
+        <div class=base><img src="img/google.png"><a href="#" class=layer>Поиск</a></div>
+        <div class=base><img src="img/calendar.png"><a href="#" class=layer>Календарь</a></div>
     </div>
 </body>
 </html>
